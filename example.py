@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-# Example from: https://python-docx.readthedocs.io/en/latest/ 
+#-*-coding:utf-8-*-
+# Example from: https://python-docx.readthedocs.io/en/latest/
 # Author: zlbd
 
 from docx import Document
@@ -7,7 +8,7 @@ from docx.shared import Inches
 
 document = Document()
 
-document.add_heading('Document Title', 0)
+document.add_heading('Document Title', 2)
 
 p = document.add_paragraph('A plain paragraph having some ')
 p.add_run('bold').bold = True
@@ -45,4 +46,26 @@ for qty, id, desc in records:
 
 document.add_page_break()
 
+paragraph = document.add_paragraph(u'明天')
+run = paragraph.add_run(u'会')
+run.bold = True
+paragraph.add_run(u' 更好.')
+paragraph.add_run('dolor').bold = True
+run = paragraph.add_run('dolor')
+run.bold = True
+run.underline = True
+paragraph = document.add_paragraph('Normal text, ')
+paragraph.add_run('text with emphasis.', 'Emphasis')
+
 document.save('demo.docx')
+print("Finished 1!")
+
+document = Document()
+document.save(u'测试.docx')
+print("Finished 2!")
+
+document = Document('demo.docx')
+paragraph = document.add_paragraph()
+paragraph.add_run('This is demo 2')
+document.save('demo2.docx')
+print("Finished 3!")
