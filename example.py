@@ -1,7 +1,6 @@
 #!/usr/bin/env python
-#-*-coding:utf-8-*-
+#-*- coding:utf-8 -*-
 # Example from: https://python-docx.readthedocs.io/en/latest/
-# Author: zlbd
 
 from docx import Document
 from docx.shared import Inches
