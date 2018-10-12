@@ -1,2 +1,6 @@
 *.docx
 \.*.un~
+.idea/
+build/
+dist/
+*.spec
