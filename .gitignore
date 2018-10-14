@@ -1,4 +1,5 @@
 *.docx
+*.doc
 \.*.un~
 .idea/
 build/

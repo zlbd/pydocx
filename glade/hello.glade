@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glade-interface>
+  <!-- interface-requires gtk+ 2.24 -->
+  <!-- interface-naming-policy project-wide -->
+  <widget class="GtkWindow" id="window_tender">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Tender Templete Builder</property>
+    <property name="window_position">center</property>
+    <signal name="destroy" handler="on_window_tender_destroy" swapped="no"/>
+    <child>
+      <widget class="GtkLayout" id="layout_tender">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="width">600</property>
+        <property name="height">300</property>
+        <child>
+          <widget class="GtkButton" id="button_open">
+            <property name="label" translatable="yes">Open</property>
+            <property name="width_request">100</property>
+            <property name="height_request">30</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="use_action_appearance">False</property>
+            <signal name="clicked" handler="on_button_open_clicked" swapped="no"/>
+          </widget>
+          <packing>
+            <property name="x">30</property>
+            <property name="y">20</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkLabel" id="label_name">
+            <property name="width_request">396</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">C:\...\...\...docx</property>
+            <property name="single_line_mode">True</property>
+          </widget>
+          <packing>
+            <property name="x">155</property>
+            <property name="y">21</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkTextView" id="view_text">
+            <property name="width_request">312</property>
+            <property name="height_request">223</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </widget>
+          <packing>
+            <property name="x">32</property>
+            <property name="y">69</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="button_up">
+            <property name="label" translatable="yes">UP</property>
+            <property name="width_request">29</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="use_action_appearance">False</property>
+            <signal name="clicked" handler="on_button_up_clicked" swapped="no"/>
+          </widget>
+          <packing>
+            <property name="x">355</property>
+            <property name="y">70</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="button_down">
+            <property name="label" translatable="yes">DN</property>
+            <property name="width_request">33</property>
+            <property name="height_request">33</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="use_action_appearance">False</property>
+            <signal name="clicked" handler="on_button_down_clicked" swapped="no"/>
+          </widget>
+          <packing>
+            <property name="x">354</property>
+            <property name="y">258</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="button_export">
+            <property name="label" translatable="yes">Export</property>
+            <property name="width_request">71</property>
+            <property name="height_request">32</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="use_action_appearance">False</property>
+            <signal name="clicked" handler="on_button_export_clicked" swapped="no"/>
+          </widget>
+          <packing>
+            <property name="x">500</property>
+            <property name="y">263</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkCheckButton" id="check_model1">
+            <property name="label" translatable="yes">Template 1</property>
+            <property name="width_request">100</property>
+            <property name="height_request">33</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="use_action_appearance">False</property>
+            <property name="draw_indicator">True</property>
+          </widget>
+          <packing>
+            <property name="x">444</property>
+            <property name="y">72</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkCheckButton" id="check_model2">
+            <property name="label" translatable="yes">Template 2</property>
+            <property name="width_request">100</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="use_action_appearance">False</property>
+            <property name="draw_indicator">True</property>
+            <signal name="toggled" handler="on_check_model2_toggled" swapped="no"/>
+          </widget>
+          <packing>
+            <property name="x">444</property>
+            <property name="y">111</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="button_test">
+            <property name="label" translatable="yes">Test</property>
+            <property name="width_request">71</property>
+            <property name="height_request">31</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="use_action_appearance">False</property>
+            <signal name="clicked" handler="on_button_test_clicked" swapped="no"/>
+          </widget>
+          <packing>
+            <property name="x">426</property>
+            <property name="y">265</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>
