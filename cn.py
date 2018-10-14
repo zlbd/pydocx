@@ -18,6 +18,7 @@ def add_test_paragraph(paragraph):
     #设置颜色
     run = paragraph.add_run(u'设置颜色')
     run.font.color.rgb = RGBColor(0xFF, 0x24, 0xE9)
+    print run.text, run.font.color.rgb[0], run.font.color.rgb[1]
 
     #设置主题颜色
     arrColor = [
@@ -31,6 +32,7 @@ def add_test_paragraph(paragraph):
     for color in arrColor:
         run = paragraph.add_run(u'\n设置颜色theme_color' + str(color))
         run.font.color.theme_color = color
+    print run.text, run.font.color.rgb[0], run.font.color.rgb[1]
 
 def main():
     #打开文档
